@@ -17,7 +17,7 @@ export default function Board({ boardData, label}) {
                     style={{
                         width: 40,
                         height: 40, 
-                        backgroundColor: (Math.floor(index/8) + index) % 2 ===0 ? "#eee" : "#444",
+                        backgroundColor: (Math.floor(index/8) + index) % 2 ===0 ? "#7f0505ff" : "#000000ff",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",

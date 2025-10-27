@@ -15,7 +15,7 @@ export default function App() {
   
   return (
     <div style={{ padding: 20}}>
-      <h1>Open World Chess</h1>
+      <h1>Large Chess</h1>
 
       <div style={{
         display: "grid",
