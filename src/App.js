@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Board from "./Board";
 
-function App() {
+function generateBoard(symbol) {
+  return Array(8)
+  .fill(null)
+  .map(() => Array(8).fill({symbol}));
+}
+
+export default function App() {
+  const boardA = generateBoard("A");
+  const boardB = generateBoard("B");
+  const boardC = generateBoard("C");
+  const boardD = generateBoard("D");
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ padding: 20}}>
+      <h1>Open World Chess</h1>
+
+      <div style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 320px)",
+        gridTemplateRows: "repeat(2, 320px",
+        gap: 0,
+        margin: 0,
+        padding: 0,
+        justifyContent: "center",
+        alignItems: "center"
+      }}>
+        <Board boardData={boardA} />
+        <Board boardData={boardB} />
+        <Board boardData={boardC} />
+      <Board boardData={boardD} />
+      </div>
     </div>
   );
 }
 
-export default App;
+
