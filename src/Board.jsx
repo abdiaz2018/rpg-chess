@@ -24,7 +24,6 @@ export default function Board({ boardData, label}) {
                         color: "white"
                     }}
                 >
-                    {cell ? cell.symbol : ""}
                 </div>
             ))}
         </div>
